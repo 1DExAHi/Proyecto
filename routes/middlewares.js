@@ -3,6 +3,7 @@ const moment = require('moment')
 
 const checkToken = async ( req,res,next ) => {
     
+    /*
     const userToken = req.headers['user-token']
 
     if(!userToken){ 
@@ -18,13 +19,13 @@ const checkToken = async ( req,res,next ) => {
     }catch(err){
 
         return res.json({error: 'token invalido'})
-        
+
     }
  
     if(payload.expiredAt < moment().unix()){
         return res.status(200).json(3312)
     }
-
+    */
     next()
 }
 
