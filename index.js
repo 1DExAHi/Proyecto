@@ -1,6 +1,5 @@
 const express = require('express')
 
-//const bodyParser = require('body-parser')
 const cors = require('cors')
 
 const ApiRouter = require('./routes/api')
@@ -14,7 +13,7 @@ app.use(express.json())
 
 app.use(cors())
 
-app.use('/', ApiRouter)
+app.use('/api', ApiRouter)
 
 
 app.listen(3700, ()=>{

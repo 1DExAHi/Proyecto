@@ -1,15 +1,9 @@
 const router = require('express').Router()
 
 const middlewares = require('./middlewares')
-const ApiOperationsRouter = require('./api/Operations')
-const ApiCategoriesRourer = require('./api/Categories')
-const ApiUserRouter = require('./api/User')
+const ApiPostsRouter = require('./api/posts')
 
-router.use('/operations', middlewares.checkToken ,ApiOperationsRouter)
-router.use('/categories', ApiCategoriesRourer)
-router.use('/users', ApiUserRouter)
-router.use('/validatesession', middlewares.checkToken, (req,res)=>{
-    res.status(200).json(true)
-})
+router.use('/posts', middlewares.checkToken ,ApiPostsRouter)
+//router.use('/posts', ApiPostsRouter) //uncomment this line for not use middlewares
 
 module.exports = router

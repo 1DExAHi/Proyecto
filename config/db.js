@@ -2,7 +2,7 @@ const { Sequelize } = require('sequelize')
 
 //const PostsModel = require('../models/post');
 
-const sequelize = new Sequelize('SomeBlog', 'root', '', {
+const sequelize = new Sequelize('someblog', 'root', '', {
     host: "localhost",
     dialect : 'mysql',
     operatorsAliases: false 
