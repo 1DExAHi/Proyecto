@@ -19,6 +19,9 @@ module.exports = (sequelize, type) => {
         category: {
             type: DataTypes.INTEGER
         },
+        idCategory:{
+            type: DataTypes.INTEGER
+        },
         createDate: {
             type: DataTypes.DATEONLY
         }

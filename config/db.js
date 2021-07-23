@@ -1,14 +1,16 @@
 const { Sequelize } = require('sequelize')
 
 const PostsModel = require('../models/post');
+const CategoriesModel = require('../models/categories')
 
 const sequelize = new Sequelize('someblog', 'root', '', {
     host: "localhost",
     dialect : 'mysql',
     operatorsAliases: false 
   });
-
+ 
 const Posts = PostsModel(sequelize, Sequelize)
+const Categories = CategoriesModel(sequelize, Sequelize)
 
 sequelize.sync({ force:false })
     .then((result) => {
@@ -18,5 +20,6 @@ sequelize.sync({ force:false })
     });
 
 module.exports = {
-    Posts
+    Posts,
+    Categories
 }
